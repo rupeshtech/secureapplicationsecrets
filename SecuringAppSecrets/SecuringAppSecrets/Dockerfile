@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 
 FROM microsoft/aspnetcore-build:2.0 AS build
-WORKDIR /src
+#WORKDIR /src
 COPY SecuringAppSecrets/SecuringAppSecrets.csproj SecuringAppSecrets/
 RUN dotnet restore SecuringAppSecrets/SecuringAppSecrets.csproj
 COPY . .
