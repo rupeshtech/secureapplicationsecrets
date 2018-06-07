@@ -39,7 +39,10 @@
             <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    @ViewData["AuthorizationKey"]
+                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
+                        Learn More
+                    </a>
                 </p>
             </div>
         </div>
@@ -47,7 +50,10 @@
             <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    
+                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                        Learn More
+                    </a>
                 </p>
             </div>
         </div>
@@ -64,7 +70,7 @@
 
 <div class="row">
     <div class="col-md-3">
-        <h1>Apikey: @configuration["ApiKey"]</h1>
+        <h2>Application uses</h2>
         <ul>
             <li>Sample pages using ASP.NET Core MVC</li>
             <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
@@ -81,9 +87,10 @@
         </ul>
     </div>
     <div class="col-md-3">
+        <h2>Overview</h2>
         <ul>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">@ViewData["AuthorizationKey2"].</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
@@ -92,7 +99,7 @@
         </ul>
     </div>
     <div class="col-md-3">
-        <h2></h2>
+        <h2>Apikey: @configuration["ApiKey"]</h2>
         <ul>
             <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>

@@ -16,7 +16,7 @@ namespace SecuringAppSecrets.Helper
         {
             string value = null;
             var kv = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(GetToken));
-            var sec = await kv.GetSecretAsync($"https://appsecretkeyvault.vault.azure.net/secrets/AuthorizationKey/44308889c85f4c6999c6640fd792a765");
+            var sec = await kv.GetSecretAsync($"https://appsecretkeyvault.vault.azure.net/secrets/AuthorizationKey/bb008eba16ce4b96a275f35b1eaed0e1");
             value = sec.Value;
             return value;
         }
@@ -36,7 +36,7 @@ namespace SecuringAppSecrets.Helper
         public static async Task<string> GetKeyVaultValueAsync(string KeyVaultName)
         {
             //var secretId = KeyVaultVariables.GetValue(KeyVaultName);
-            var secretUri = $"https://appsecretkeyvault.vault.azure.net/secrets/ApiKey/d24aac5508ee4dbaba8ae6f3550a528d";
+            var secretUri = $"https://appsecretkeyvault.vault.azure.net/secrets/ApiKey/834027a4e821407f96c7370a1d7113ee";
             var azureServiceTokenProvider = new AzureServiceTokenProvider();
             var kv = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));// GetToken));
             var sec = await kv.GetSecretAsync(secretUri);

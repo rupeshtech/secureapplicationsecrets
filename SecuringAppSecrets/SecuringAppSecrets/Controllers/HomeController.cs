@@ -27,7 +27,7 @@ namespace SecuringAppSecrets.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-            ViewData["AuthorizationKey2"] = KeyVaultHelper.GetKeyVaultValueAsync("AuthorizationKey").GetAwaiter().GetResult();
+            ViewData["ApiKey"] = KeyVaultHelper.GetKeyVaultValueAsync("ApiKey").GetAwaiter().GetResult();
             return View();
         }
 
