@@ -12,25 +12,22 @@ namespace SecuringAppSecrets.Controllers
     public class HomeController : Controller
     {
         public IActionResult Index()
-        {
-            var valueFromKeyVault = KeyVaultHelper.GetValueAsync("AuthorizationKey").GetAwaiter().GetResult();
-            ViewData["AuthorizationKey"] = valueFromKeyVault;
-
-            ViewData["AuthorizationKey2"] = KeyVaultHelper.GetKeyVaultValueAsync("AuthorizationKey").GetAwaiter().GetResult(); ;
+        {      
             return View();
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
+            var valueFromKeyVault = KeyVaultHelper.GetValueAsync("AuthorizationKey").GetAwaiter().GetResult();
+            ViewData["AuthorizationKey"] = valueFromKeyVault;
             return View();
         }
 
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-
+            ViewData["AuthorizationKey2"] = KeyVaultHelper.GetKeyVaultValueAsync("AuthorizationKey").GetAwaiter().GetResult();
             return View();
         }
 
