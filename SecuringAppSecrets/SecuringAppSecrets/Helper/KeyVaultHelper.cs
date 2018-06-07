@@ -36,7 +36,7 @@ namespace SecuringAppSecrets.Helper
         public static async Task<string> GetKeyVaultValueAsync(string KeyVaultName)
         {
             //var secretId = KeyVaultVariables.GetValue(KeyVaultName);
-            var secretUri = $"https://appsecretkeyvault.vault.azure.net/secrets/AuthorizationKey/44308889c85f4c6999c6640fd792a765";
+            var secretUri = $"https://appsecretkeyvault.vault.azure.net/secrets/ApiKey/d24aac5508ee4dbaba8ae6f3550a528d";
             var azureServiceTokenProvider = new AzureServiceTokenProvider();
             var kv = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));// GetToken));
             var sec = await kv.GetSecretAsync(secretUri);
