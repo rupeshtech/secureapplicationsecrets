@@ -39,10 +39,7 @@
             <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
+                    @ViewData["AuthorizationKey"]
                 </p>
             </div>
         </div>
@@ -50,10 +47,7 @@
             <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
+                    @ViewData["AuthorizationKey2"]
                 </p>
             </div>
         </div>
@@ -87,7 +81,6 @@
         </ul>
     </div>
     <div class="col-md-3">
-        <h2>MySettings: @configuration.GetSection("MySettings")["CommonSettings"]</h2>
         <ul>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>

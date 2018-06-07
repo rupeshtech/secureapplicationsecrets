@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SecuringAppSecrets.Helper;
 using SecuringAppSecrets.Models;
 
 namespace SecuringAppSecrets.Controllers
@@ -12,6 +13,10 @@ namespace SecuringAppSecrets.Controllers
     {
         public IActionResult Index()
         {
+            var valueFromKeyVault = KeyVaultHelper.GetValueAsync("AuthorizationKey").GetAwaiter().GetResult();
+            ViewData["AuthorizationKey"] = valueFromKeyVault;
+
+            ViewData["AuthorizationKey2"] = KeyVaultHelper.GetKeyVaultValueAsync("AuthorizationKey").GetAwaiter().GetResult(); ;
             return View();
         }
 
